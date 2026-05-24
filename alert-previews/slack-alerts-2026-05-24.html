@@ -1,26 +1,21 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow">
 <title>Slack alert previews — slim format (2026-05-24)</title><style>
-:root{--txt:#1d1c1d;--muted:#616061;--link:#1264a3;--border:#e8e8e8;}
-*{box-sizing:border-box;}
+:root{--txt:#1d1c1d;--muted:#616061;--link:#1264a3;--border:#e8e8e8;}*{box-sizing:border-box;}
 body{margin:0;background:#f4f4f5;font-family:Lato,'Helvetica Neue',Helvetica,Arial,sans-serif;color:var(--txt);}
 .wrap{max-width:760px;margin:0 auto;padding:28px 18px 60px;}
-h1{font-size:20px;font-weight:800;margin:0 0 4px;}
-.sub{color:var(--muted);font-size:13px;margin:0 0 26px;}
-.msg-label{font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);margin:30px 0 8px;}
+h1{font-size:20px;font-weight:800;margin:0 0 4px;}.sub{color:var(--muted);font-size:13px;margin:0 0 10px;}
+.grouphdr{font-size:15px;font-weight:800;margin:34px 0 2px;padding-top:14px;border-top:2px solid #e0e0e0;}
+.msg-label{font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);margin:18px 0 8px;}
 .msg-label .chan{font-weight:600;text-transform:none;letter-spacing:0;color:#1264a3;margin-left:6px;}
 .slack-msg{display:flex;gap:10px;background:#fff;border:1px solid #e6e6e6;border-radius:8px;padding:12px 16px 14px;box-shadow:0 1px 2px rgba(0,0,0,.04);}
 .avatar{flex:0 0 36px;height:36px;border-radius:6px;background:#4a154b;color:#fff;font-weight:800;font-size:13px;display:flex;align-items:center;justify-content:center;}
-.msg-body{flex:1;min-width:0;}
-.msg-meta{margin-bottom:4px;}
-.app-name{font-weight:800;font-size:15px;}
-.app-tag{background:#e8e8e8;color:#616061;font-size:10px;font-weight:700;padding:1px 5px;border-radius:3px;margin-left:6px;vertical-align:middle;}
+.msg-body{flex:1;min-width:0;}.msg-meta{margin-bottom:4px;}
+.app-name{font-weight:800;font-size:15px;}.app-tag{background:#e8e8e8;color:#616061;font-size:10px;font-weight:700;padding:1px 5px;border-radius:3px;margin-left:6px;vertical-align:middle;}
 .ts{color:var(--muted);font-size:12px;margin-left:6px;}
 .bk-header{font-size:18px;font-weight:800;line-height:1.3;margin:6px 0 8px;}
 .bk-context{color:var(--muted);font-size:13px;line-height:1.4;margin:6px 0;}
-.bk-section{font-size:15px;line-height:1.5;margin:8px 0;}
-.bk-section strong{font-weight:700;}
+.bk-section{font-size:15px;line-height:1.5;margin:8px 0;}.bk-section strong{font-weight:700;}
 .bk-divider{border:none;border-top:1px solid var(--border);margin:12px 0;}
 a{color:var(--link);text-decoration:none;}a:hover{text-decoration:underline;}
 blockquote{border-left:4px solid #dcdcdc;margin:4px 0;padding:2px 0 2px 12px;color:#454545;}
@@ -28,64 +23,88 @@ code{font-family:Monaco,Menlo,Consolas,monospace;font-size:12px;color:#e01e5a;ba
 pre{font-family:Monaco,Menlo,Consolas,monospace;font-size:12.5px;line-height:1.5;color:#1d1c1d;background:#f8f8f8;border:1px solid #e2e2e2;border-radius:6px;padding:10px 12px;white-space:pre-wrap;margin:6px 0;}
 .bk-actions{display:flex;gap:8px;margin:10px 0 4px;flex-wrap:wrap;}
 .bk-btn{font-family:inherit;font-size:14px;font-weight:700;border-radius:4px;padding:0 14px;height:34px;cursor:default;}
-.bk-btn.default{background:#fff;border:1px solid rgba(29,28,29,.3);color:#1d1c1d;}
-.bk-btn.primary{background:#007a5a;border:1px solid #007a5a;color:#fff;}
+.bk-btn.default{background:#fff;border:1px solid rgba(29,28,29,.3);color:#1d1c1d;}.bk-btn.primary{background:#007a5a;border:1px solid #007a5a;color:#fff;}
 .note{font-size:12px;color:var(--muted);margin:6px 0 0;font-style:italic;}
-.legend{background:#fff;border:1px solid #e6e6e6;border-radius:8px;padding:14px 16px;font-size:13px;color:#454545;line-height:1.6;margin-top:34px;}
-.legend b{color:#1d1c1d;}
+.legend{background:#fff;border:1px solid #e6e6e6;border-radius:8px;padding:14px 16px;font-size:13px;color:#454545;line-height:1.6;margin-top:30px;}.legend b{color:#1d1c1d;}
 </style></head>
 <body><div class="wrap">
 <h1>Slack alert previews — slim format</h1>
 <p class="sub">How the debloated alerts render in Slack · 2026-05-24 · sample data</p>
 
-    <div class="msg-label">Campaign launch alert <span class="chan">#client-campaigns</span></div>
-    <div class="slack-msg">
-      <div class="avatar">SI</div>
-      <div class="msg-body">
-        <div class="msg-meta"><span class="app-name">Campaign Bot</span><span class="app-tag">APP</span><span class="ts">2:14 PM</span></div>
-        <div class="bk-header">🚀  B2B SaaS — RevOps Leaders · 1 Campaign Live</div>
+<div class="grouphdr">1 · Campaign launch alert — forked by package</div>
+<div class="msg-label">Launch — Booked Meetings (HTML sample) <span class="chan">#client-campaigns</span></div>
+    <div class="slack-msg"><div class="avatar">SI</div><div class="msg-body">
+    <div class="msg-meta"><span class="app-name">Campaign Bot</span><span class="app-tag">APP</span><span class="ts">2:14 PM</span></div>
+    <div class="bk-header">🚀  B2B SaaS — RevOps Leaders · 1 Campaign Live</div>
 <div class="bk-context">May 24, 2026  ·  Mid-market B2B SaaS, RevOps &amp; sales leadership</div>
-<div class="bk-section"><strong>:speech_balloon:  The Pitch</strong><br><strong>Pain:</strong>  Reps lose hours a week to manual pipeline hygiene instead of selling.<br><strong>Proof:</strong>  Hatch CRM cut quote turnaround 60% in three weeks.<br><strong>Ask:</strong>  A working audit of your pipeline-ops stack and the three fixes that recover the most rep hours.</div>
-<div class="bk-section"><strong>:framed_picture:  Sample deliverable</strong>  <a href="https://htmlpreview.github.io/?https://raw.githubusercontent.com/nick-feier/si-deliverables/main/sample-audit.html">Open the sample audit</a></div>
-<div class="bk-section">:busts_in_silhouette: <strong>2,400 prospects</strong>  ·  :outbox_tray: <strong>180/day</strong>  ·  :bust_in_silhouette: 6 inboxes  ·  :date: Mon–Fri 9–2 PT  ·  :email: 3 emails / ~4d  ·  :dart: 14d Jun 7 · 30d Jun 24</div>
+<div class="bk-section"><strong>💬  The Pitch</strong><br><strong>Pain:</strong>  Reps lose hours a week to manual pipeline hygiene instead of selling.<br><strong>Proof:</strong>  Hatch CRM cut quote turnaround 60% in three weeks.<br><strong>Ask:</strong>  A working audit of your pipeline-ops stack and the three fixes that recover the most rep hours.</div>
+<div class="bk-section"><strong>🖼️  Sample deliverable</strong>  <a href="https://htmlpreview.github.io/?https://raw.githubusercontent.com/nick-feier/si-deliverables/main/sample-audit.html">Open the sample audit</a></div>
+<div class="bk-section">👥 <strong>2,400 prospects</strong>  ·  📤 <strong>180/day</strong>  ·  👤 6 inboxes  ·  📅 Mon–Fri 9–2 PT  ·  📧 3 emails / ~4d  ·  🎯 14d Jun 7 · 30d Jun 24</div>
 <div class="bk-section"><strong>Hand-off:</strong>  Interested replies → #internal-saas-positive-replies; SI books the call.</div>
-<div class="bk-context"><em>Something Inc.  ·  Cold Outreach Program</em></div>
-      </div>
-    </div>
-<p class="note">Sample-deliverable line is conditional — shown here for a booked-meeting client. For SQLs-only post_call E1 DELs it is omitted.</p>
+<div class="bk-context"><em>Something Inc.  ·  Cold Outreach Program</em></div></div></div>
+<div class="msg-label">Launch — SQLs only (no sample line) <span class="chan">#client-campaigns</span></div>
+    <div class="slack-msg"><div class="avatar">SI</div><div class="msg-body">
+    <div class="msg-meta"><span class="app-name">Campaign Bot</span><span class="app-tag">APP</span><span class="ts">2:14 PM</span></div>
+    <div class="bk-header">🚀  White-label SEO Agencies · 1 Campaign Live</div>
+<div class="bk-context">May 24, 2026  ·  SEO &amp; web-design agency founders (US)</div>
+<div class="bk-section"><strong>💬  The Pitch</strong><br><strong>Pain:</strong>  One Google update and a single-channel client walks.<br><strong>Proof:</strong>  A recent agency cohort signed a paying client in 14 days.<br><strong>Ask:</strong>  A white-label cold email line that books their clients more meetings, on their brand.</div>
+<div class="bk-section">👥 <strong>3,000 prospects</strong>  ·  📤 <strong>300/day</strong>  ·  👤 8 inboxes  ·  📅 Mon–Fri 9–2 PT  ·  📧 3 emails / ~4d  ·  🎯 14d Jun 7 · 30d Jun 24</div>
+<div class="bk-section"><strong>Hand-off:</strong>  Interested replies → #goodwork-positive-replies; GoodWork works them as SQLs.</div>
+<div class="bk-context"><em>GoodWork  ·  Cold Outreach Program</em></div></div></div>
+<p class="note">Only difference: SQLs-only omits the Sample-deliverable line (no SI HTML build — doctrine #11) and the hand-off says the client works the replies.</p>
 
-    <div class="msg-label">Positive-reply alert — Booked Meeting (with deliverable) <span class="chan">#internal-saas-positive-replies</span></div>
-    <div class="slack-msg">
-      <div class="avatar">SI</div>
-      <div class="msg-body">
-        <div class="msg-meta"><span class="app-name">Campaign Bot</span><span class="app-tag">APP</span><span class="ts">2:14 PM</span></div>
-        <div class="bk-header">🔥 Positive Reply</div>
+<div class="grouphdr">2 · Positive-reply alert</div>
+<div class="msg-label">Reply — Booked Meeting (deliverable link) <span class="chan">#internal-saas-positive-replies</span></div>
+    <div class="slack-msg"><div class="avatar">SI</div><div class="msg-body">
+    <div class="msg-meta"><span class="app-name">Campaign Bot</span><span class="app-tag">APP</span><span class="ts">2:14 PM</span></div>
+    <div class="bk-header">🔥 Positive Reply</div>
 <div class="bk-section"><strong>Sarah Chen</strong> · VP RevOps, Hatch CRM · sarah@hatchcrm.com<br><a href="https://send.somethinginc.com/leads/inbox">B2B SaaS — RevOps Leaders ↗</a></div>
 <div class="bk-section"><strong>📧 Their reply:</strong><br><blockquote>This is timely — we&#x27;re mid-migration and pipeline hygiene is a mess. Can you send that audit?</blockquote></div>
 <div class="bk-section"><strong>✍️ Suggested reply</strong> — <em>re: idea for Hatch CRM</em><br><pre>Hi Sarah — great timing. Here&#x27;s the audit built for Hatch&#x27;s stack at the link below; it flags the three fixes that recover the most rep hours. Worth 15 minutes to walk through what we&#x27;d tackle first?</pre></div>
 <div class="bk-section">🔗 <strong>Link for your reply:</strong> <a href="https://htmlpreview.github.io/?https://raw.githubusercontent.com/nick-feier/si-deliverables/main/sample-audit.html">Open the audit</a></div>
 <div class="bk-actions"><button class="bk-btn primary">✅ Mark as Replied</button><button class="bk-btn default">📧 Open in Inbox</button></div>
-<div class="bk-context">⏰ Today at 2:14 PM · reply within 30 min</div>
-      </div>
-    </div>
-
-    <div class="msg-label">Positive-reply alert — SQL / post_call (no link yet) <span class="chan">#goodwork-positive-replies</span></div>
-    <div class="slack-msg">
-      <div class="avatar">SI</div>
-      <div class="msg-body">
-        <div class="msg-meta"><span class="app-name">Campaign Bot</span><span class="app-tag">APP</span><span class="ts">2:14 PM</span></div>
-        <div class="bk-header">🔥 Positive Reply</div>
+<div class="bk-context">⏰ Today at 2:14 PM · reply within 30 min</div></div></div>
+<div class="msg-label">Reply — SQL / post_call (no link yet) <span class="chan">#goodwork-positive-replies</span></div>
+    <div class="slack-msg"><div class="avatar">SI</div><div class="msg-body">
+    <div class="msg-meta"><span class="app-name">Campaign Bot</span><span class="app-tag">APP</span><span class="ts">2:14 PM</span></div>
+    <div class="bk-header">🔥 Positive Reply</div>
 <div class="bk-section"><strong>Marcus Lee</strong> · Founder, Northpeak SEO · marcus@northpeak.com<br><a href="https://send.somethinginc.com/leads/inbox">White-label SEO Agencies ↗</a></div>
 <div class="bk-section"><strong>📧 Their reply:</strong><br><blockquote>Sure, send it over.</blockquote></div>
 <div class="bk-section"><strong>✍️ Suggested reply</strong> — <em>re: idea for Northpeak SEO</em><br><pre>Happy to put the speed + technical SEO audit together for northpeak.com. What&#x27;s the best URL to run it against? I&#x27;ll send the findings back within two business days.</pre></div>
 <div class="bk-context">📋 <em>Produced after the call — no link to send yet.</em></div>
 <div class="bk-actions"><button class="bk-btn primary">✅ Mark as Replied</button><button class="bk-btn default">📧 Open in Inbox</button></div>
-<div class="bk-context">⏰ Today at 2:14 PM · reply within 30 min</div>
-      </div>
-    </div>
+<div class="bk-context">⏰ Today at 2:14 PM · reply within 30 min</div></div></div>
+
+<div class="grouphdr">3 · Follow-up cadence (FU1–FU5)</div>
+<div class="msg-label">FU — Booked, FU#1 (asset delivery) <span class="chan">#internal-saas-positive-replies</span></div>
+    <div class="slack-msg"><div class="avatar">SI</div><div class="msg-body">
+    <div class="msg-meta"><span class="app-name">Campaign Bot</span><span class="app-tag">APP</span><span class="ts">2:14 PM</span></div>
+    <div class="bk-section">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━<br>🟡 <strong>AWAITING RESPONSE</strong> — Hatch CRM<br>━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</div>
+<div class="bk-section">👤 Sarah Chen, VP RevOps<br>📧 sarah@hatchcrm.com</div>
+<hr class="bk-divider">
+<div class="bk-section"><strong>📊 STATUS:</strong><br>✅ Initial reply sent — May 24<br>📨 Follow-up #1 of 5 — <strong>due Jun 2</strong></div>
+<hr class="bk-divider">
+<div class="bk-section"><strong>✍️ Follow-up #1 script:</strong><br><pre>Sarah — circling back with the rollout playbook I mentioned; it maps the pipeline-ops fixes to a 30-day sequence. Want me to send it over?</pre></div>
+<div class="bk-section">🔗 <strong>Link for your reply:</strong> <a href="https://htmlpreview.github.io/?https://raw.githubusercontent.com/nick-feier/si-deliverables/main/sample-audit.html">Open the playbook</a></div>
+<hr class="bk-divider">
+<div class="bk-actions"><button class="bk-btn primary">✉️ Follow-up #1 sent</button><button class="bk-btn default">💬 They responded</button><button class="bk-btn default">🛑 Stop</button></div></div></div>
+<div class="msg-label">FU — SQL, FU#2 (post_call, no link) <span class="chan">#goodwork-positive-replies</span></div>
+    <div class="slack-msg"><div class="avatar">SI</div><div class="msg-body">
+    <div class="msg-meta"><span class="app-name">Campaign Bot</span><span class="app-tag">APP</span><span class="ts">2:14 PM</span></div>
+    <div class="bk-section">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━<br>🟡 <strong>AWAITING RESPONSE</strong> — Northpeak SEO<br>━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</div>
+<div class="bk-section">👤 Marcus Lee, Founder<br>📧 marcus@northpeak.com</div>
+<hr class="bk-divider">
+<div class="bk-section"><strong>📊 STATUS:</strong><br>✅ Audit sent — May 26<br>📨 Follow-up #2 of 5 — <strong>due Jun 3</strong></div>
+<hr class="bk-divider">
+<div class="bk-section"><strong>✍️ Follow-up #2 script:</strong><br><pre>Marcus — also put together a quick Craft CMS migration readiness note for northpeak.com. Want me to run it and send it back?</pre></div>
+<hr class="bk-divider">
+<div class="bk-actions"><button class="bk-btn primary">✉️ Follow-up #2 sent</button><button class="bk-btn default">💬 They responded</button><button class="bk-btn default">🛑 Stop</button></div></div></div>
+<p class="note">FU messages shown AS-IS (current format) — they were not part of the launch/reply debloat. Same 5-stage cadence for both packages; SQL post_call surfaces no link. Say the word to slim these to match the cards.</p>
+
 <div class="legend">
-<b>What changed (debloat 2026-05-24):</b><br>
-• <b>Launch alert</b> ~11 → ~6 blocks — dropped the going-live prose, the Sequence (E1/E2/E3) breakdown, the Personalization &amp; screening block, and the separate eval-dates block (cadence + 14d/30d now fold into the one stats line).<br>
-• <b>Positive-reply card</b> 12 → 7 blocks — 4-field grid → one identity line; dropped the triage line; merged the deliverable + link into one optional line; <b>post_call</b> now shows “produced after the call — no link yet” instead of the old “no buying signal”.
+<b>Debloat (2026-05-24):</b><br>
+• <b>Launch alert</b> ~11 → ~6 blocks; forked: Booked includes the Sample line, SQL omits it.<br>
+• <b>Positive-reply card</b> 12 → 7 blocks — one identity line, no triage, one optional link line; <b>post_call</b> shows “produced after the call — no link yet”.<br>
+• <b>FU cadence</b> shown as-is (not yet debloated).
 </div>
 </div></body></html>
